@@ -1,10 +1,19 @@
 public class Point {
-    double x1 = 3.0, y1 = 5.0;
-    double x2 = 7.0, y2 = 12.0;
-    public double p1 = x2 - x1;
-    public double p2 = y2 - y1;
-
-    public double distance() {
-        return Math.sqrt((this.p1 * this.p1) + (this.p2 * this.p2));
+    public double x1, y1;
+    public double x2, y2;
+    public Point p1 (double x1, double y1) {
+        this.x1 = x1;
+        this.y1 = y1;
     }
+
+    public Point p2 (double x2, double y2) {
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+
+    public double distance(Point p1, Point p2) {
+        return Math.sqrt((p2.x2 - p1.x1) * (p2.x2 - p1.x1) + (p2.y2 - p1.y1) * (p2.y2 - p1.y1));
+    }
+
+
 }
